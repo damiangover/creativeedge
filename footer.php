@@ -1,15 +1,13 @@
 
 
 <div class="subscribe">
-    <section>
-        <p>Strategies for change. Straight to your inbox.</p>
-        <form>
-            <fieldset>
-                <input type="email" required placeholder="Email Address" class="big-text"/>
-                <input type="submit" value="Join" class="big-button"/>
-            </fieldset>
-        </form>
-    </section>
+    <p>Strategies for change. Straight to your inbox.</p>
+    <form>
+        <fieldset>
+            <input type="email" required placeholder="Email Address" class="big-text"/>
+            <input type="submit" value="Join" class="big-button"/>
+        </fieldset>
+    </form>
 </div>
 
 <!--<script src="js/vendor/modernizr-3.5.0.min.js"></script>-->
