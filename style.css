@@ -167,7 +167,7 @@ a:hover{
 }
 
 nav a {
-    padding: 0 1.618em;
+    margin: 0 1.618em;
     max-width: 140px;
     text-decoration: none;
     display: flex;
