@@ -1,14 +1,14 @@
 
 
-<div class="subscribe">
-    <p>Strategies for change. Straight to your inbox.</p>
-    <form>
-        <fieldset>
-            <input type="email" required placeholder="Email Address" class="big-text"/>
-            <input type="submit" value="Join" class="big-button"/>
-        </fieldset>
-    </form>
-</div>
+<!--<div class="subscribe">-->
+<!--    <p>Strategies for change. Straight to your inbox.</p>-->
+<!--    <form>-->
+<!--        <fieldset>-->
+<!--            <input type="email" required placeholder="Email Address" class="big-text"/>-->
+<!--            <input type="submit" value="Join" class="big-button"/>-->
+<!--        </fieldset>-->
+<!--    </form>-->
+<!--</div>-->
 
 <!--<script src="js/vendor/modernizr-3.5.0.min.js"></script>-->
 <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"-->
