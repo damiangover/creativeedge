@@ -127,36 +127,52 @@ blockquote {
 .grid-container {
     min-height: 100vh;
     display: grid;
-    grid-gap: 1.618em;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: minmax(1.618em, 5vh) 1fr minmax(1.618em, 5vh) 1em;
+    grid-gap: 1em;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 5vh) repeat(2, 1fr);
     grid-template-areas:
-            "logo ... ... nav nav"
-            "... content content content ..."
-            "... footer footer footer ...";
-            "... ... ... ... ...";
+            "... ... logo logo ... ..."
+            "... ... nav nav ... ..."
+            "... content content content content ..."
+            "... footer footer footer footer ...";
 }
 
 .logo {
     grid-area: logo;
     align-self: center;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
     grid-area: nav;
     align-self: center;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
 nav ul {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     list-style: none;
 }
 
+.menu {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    margin: 0 0.75em;
+    color: black;
+    text-decoration: none;
+}
+
 a {
+    min-width: 50px;
+    max-width: 150px;
     color: black;
     text-decoration: none;
 }
@@ -166,13 +182,6 @@ a:hover{
     border-bottom: .0618em #0090ff solid;
 }
 
-nav a {
-    margin: 0 1.618em;
-    max-width: 140px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-}
 
 a:visited {
     color: black;
@@ -180,7 +189,8 @@ a:visited {
 
 .content {
     grid-area: content;
-    max-width: 56.25em;
+    /*max-width: 56.25em;*/
+    align-self: center;
 }
 
 .end {
@@ -256,6 +266,7 @@ form .big-text {
     -webkit-animation: fadein 3s;
     -o-animation: fadein 3s;
 }
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -264,6 +275,7 @@ form .big-text {
         opacity:1;
     }
 }
+
 @-moz-keyframes fadein {
     from {
         opacity:0;
@@ -272,6 +284,7 @@ form .big-text {
         opacity:1;
     }
 }
+
 @-webkit-keyframes fadein {
     from {
         opacity:0;
@@ -280,6 +293,7 @@ form .big-text {
         opacity:1;
     }
 }
+
 @-o-keyframes fadein {
     from {
         opacity:0;
@@ -379,8 +393,28 @@ form .big-text {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 56.25em) {
+    .grid-container {
+        min-height: 100vh;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: minmax(1.618em, 5vh) 1fr minmax(1.618em, 5vh);
+        grid-template-areas:
+                "logo ... ... ... nav"
+                "... content content content ..."
+                "... footer footer footer ...";
+    }
+
+    .related-post-container {
+        grid-area: content;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .related-post {
+        margin: 0 1.618em;
+    }
 }
 
 @media print,
