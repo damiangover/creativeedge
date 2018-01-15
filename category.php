@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="content">
+    <div class="content animate-text--2s">
         <main>
             <div class="category-blurb">
                 <section>
@@ -47,5 +47,4 @@
             </div>
         </main>
     </div>
-
 <?php get_footer(); ?>

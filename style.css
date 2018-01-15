@@ -254,7 +254,7 @@ form .big-text {
     width: 70%;
 }
 
-.animate-text--5s {
+.animate-text--6s {
     animation: fadein 6s;
     -moz-animation: fadein 6s;
     -webkit-animation: fadein 6s;
@@ -266,6 +266,13 @@ form .big-text {
     -moz-animation: fadein 3s;
     -webkit-animation: fadein 3s;
     -o-animation: fadein 3s;
+}
+
+.animate-text--2s {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s;
 }
 
 @keyframes fadein {
