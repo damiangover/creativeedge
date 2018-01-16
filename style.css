@@ -228,6 +228,12 @@ nav a:hover:before {
     font-size: 1.333em;
 }
 
+.animate-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 200ms, opacity 200ms;
+}
+
 .big-button {
     width: 25%;
     background-color: #0090ff;
