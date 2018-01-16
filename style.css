@@ -212,6 +212,12 @@ nav a:hover:before {
     align-self: center;
 }
 
+.front {
+    align-self: center;
+    grid-column: 2 / 6;
+    font-size: 2.369em;
+}
+
 .end {
     grid-area: footer;
 }
