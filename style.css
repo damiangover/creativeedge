@@ -437,16 +437,15 @@ form .big-text {
         min-height: 100vh;
         display: grid;
         grid-gap: 1em;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: minmax(1.618em, 5vh) 1fr minmax(1.618em, 5vh);
         grid-template-areas:
-                "logo ... ... ... nav"
-                "... content content content ..."
-                "... footer footer footer ...";
+                "logo logo ... ... nav nav"
+                "... content content content content ..."
+                "... footer footer footer footer ...";
     }
 
     .related-post-container {
-        min-height: 20%;
         border-bottom: 1px solid lightgray;
         border-top: 1px solid lightgray;
         grid-area: content;
