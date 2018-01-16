@@ -9,12 +9,14 @@
                     $active_category = get_category( get_query_var( 'cat' ) );
                     $active_category_id = $active_category->cat_ID;
                     echo category_description( $active_category_id );
-                    ?>
+                    query_posts($query_string .'&posts_per_page=3');  ?>
                 </section>
             </div>
 
             <div class="related-post-container">
+
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
                     <div class="related-post">
                         <article>
                             <header class="entry-header">
