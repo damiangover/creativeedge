@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="content animate-text--2s">
+    <div class="content grid-item--center animate-text--2s">
         <main>
             <div class="category-blurb">
                 <section>

@@ -212,6 +212,7 @@ nav a:hover:before {
     align-self: center;
 }
 
+.grid-item--center { align-self: center; }
 .front {
     align-self: center;
     grid-column: 2 / 6;
