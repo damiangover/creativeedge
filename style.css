@@ -17,9 +17,10 @@ Author URI: damiangover.com
    ========================================================================== */
 
 html {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     color: #222;
-    font-size: 1em;
+    font-size: 16px;
     line-height: 1.4;
 }
 
@@ -106,6 +107,7 @@ textarea {
 
 h1 {
     font-size: 2.369em;
+    font-weight: 400;
 }
 
 h2 {
@@ -114,6 +116,7 @@ h2 {
 
 h3 {
     font-size: 1.333em;
+    font-weight: 400;
 }
 
 time {
@@ -122,6 +125,21 @@ time {
 
 blockquote {
     font-style: oblique;
+}
+
+.longer-read {
+    font-family: 'Lato', serif;
+    line-height: 1.6;
+}
+
+.post-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+
+
+.content .excerpt {
 }
 
 .grid-container {
@@ -165,13 +183,12 @@ nav ul {
 }
 
 nav a {
-    margin: 0 1.618em;
     max-width: 150px;
     position: relative;
     text-decoration: none;
     display: flex;
-    margin: 0 1.618em;
-    padding: 0.618em 0;
+    margin: 0 1.618rem;
+    padding: .382rem 0;
     justify-content: center;
 }
 
@@ -188,7 +205,7 @@ nav a:before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 1px;
     bottom: 0;
     left: 0;
     border-radius: 10%;
@@ -213,6 +230,7 @@ nav a:hover:before {
 }
 
 .grid-item--center { align-self: center; }
+
 .front {
     align-self: center;
     grid-column: 2 / 6;
@@ -260,6 +278,11 @@ nav a:hover:before {
 
 .category-blurb {
     text-align: center;
+}
+
+.category-blurb p {
+    font-weight: 300;
+    font-family: "Lato", serif;
 }
 
 .big-button:hover {
@@ -459,7 +482,7 @@ form .big-text {
         margin: 1em 1.618em;
     }
 
-    .excerpt {
+    .excerpt p {
         font-style: italic;
     }
 }
