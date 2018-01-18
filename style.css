@@ -159,14 +159,13 @@ blockquote cite:before {
 .longer-read {
     font-family: 'Lato', serif;
     line-height: 1.6;
+    max-width: 32.5rem;
 }
 
 .post-heading {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
+    text-align: center;
 }
-
-
 
 .content .excerpt {
 }
@@ -254,7 +253,6 @@ nav a:hover:before {
 
 .content {
     grid-area: content;
-    /*max-width: 56.25em;*/
     align-self: center;
 }
 
@@ -486,6 +484,12 @@ form .big-text {
    ========================================================================== */
 
 @media only screen and (min-width: 56.25em) {
+
+    .post-heading {
+        font-family: 'Montserrat', sans-serif;
+        text-align: left;
+    }
+
     .grid-container {
         min-height: 100vh;
         display: grid;
