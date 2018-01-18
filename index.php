@@ -13,7 +13,7 @@
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <header class="entry-header">
+                    <header class="entry-header post-heading">
                         <?php
 
                         if (is_single()) {
@@ -26,7 +26,7 @@
 
                         ?>
                     </header>
-                    <section>
+                    <section class="longer-read">
                         <?php
                         /* translators: %s: Name of current post */
                         the_content(sprintf(

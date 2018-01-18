@@ -19,7 +19,7 @@
 
                     <div class="related-post">
                         <article>
-                            <header class="entry-header">
+                            <header class="entry-header post-heading">
                                 <?php
 
                                 if (is_single()) {
@@ -32,7 +32,7 @@
 
                                 ?>
                             </header>
-                            <div class="excerpt"><?php the_excerpt(); ?></div>
+                            <div class="excerpt longer-read"><?php the_excerpt(); ?></div>
                         </article>
                     </div>
                 <?php endwhile; endif; ?>
