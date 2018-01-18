@@ -123,8 +123,37 @@ time {
     font-size: 0.75em;
 }
 
+blockquote:before {
+    font-family: Georgia, serif;
+    display: block;
+    content: "\201C";
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #565656;
+}
+
 blockquote {
-    font-style: oblique;
+    font-style: italic;
+    margin: 0.25em 0;
+    padding: 0.25em 1.618rem;
+    line-height: 1.45;
+    position: relative;
+    color: #565656;
+}
+
+blockquote cite {
+    color: #9D9D9D;
+    font-size: 0.75rem;
+}
+
+blockquote p {
+    margin-bottom: 0;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
 }
 
 .longer-read {
