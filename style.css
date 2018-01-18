@@ -332,6 +332,24 @@ form .big-text {
     width: 70%;
 }
 
+.related-post-container {
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    grid-area: content;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.related-post {
+    margin: 1em 1.618em;
+    align-self: center;
+    max-width: 75%;
+}
+
+.related-post .excerpt {
+    align-self: center;
+}
+
 .animate-text--6s {
     animation: fadein 6s;
     -moz-animation: fadein 6s;
@@ -509,6 +527,7 @@ form .big-text {
     .related-post {
         max-width: 20em;
         margin: 1em 1.618em;
+        align-self: flex-start;
     }
 
     .excerpt p {
