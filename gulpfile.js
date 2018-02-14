@@ -5,10 +5,12 @@ const gulp = require('gulp');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const newer = require('gulp-newer');
+const browserSync = require('browser-sync').create();
 
 const source = {
     root: "./",
-    build: "./wp-creativeedge/"
+    build: "./wp-creativeedge/",
+    mamp: "/MAMP/htdocs/wordpress/wp-content/themes/wp-creativeedge/"
 };
 
 gulp.task('css', function () {
@@ -28,4 +30,21 @@ gulp.task('php', function () {
         .pipe(gulp.dest(source.build));
 });
 
-gulp.task('default', ['css', 'php']);
+gulp.task('mamp', function () {
+    return gulp.src(source.build + '*.*')
+        .pipe(gulp.dest(source.mamp));
+});
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "http://localhost/wordpress",
+        browser: ["chrome", "firefox", "opera"]
+    });
+    gulp.watch(source.mamp + '*.css').on("change", browserSync.reload);
+});
+
+gulp.task('watch', function() {
+    gulp.watch(source.root + "*.*", ['css', 'php', 'mamp']);
+});
+
+gulp.task('default', ['watch']);
