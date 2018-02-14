@@ -1,0 +1,33 @@
+@mixin fadein($val) {
+  animation: fadein #{$val}s;
+}
+
+.animate-text
+{
+  &--2s {
+    @include fadein(2);
+  }
+
+  &--3s {
+    @include fadein(3);
+  }
+
+  &--6s {
+    @include fadein(6);
+  }
+}
+
+.animate-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 200ms, opacity 200ms;
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
