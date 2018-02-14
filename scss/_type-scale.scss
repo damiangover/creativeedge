@@ -1,31 +1,56 @@
 @import "_base";
 
+@function pow($base, $index) {
+  $result: 1;
+
+  @for $i from 0 to $index {
+    @if $index > 0 {
+      $result: $result * $base;
+    } @else {
+      $result: $result / $base;
+    }
+  }
+
+  @debug 'Before Return: #{$result}';
+
+  @return $result;
+}
+
 @font-face {
   font-family: $base-font-family;
 }
 
+body {
+  font-size: scale-text(0);
+}
+
 h1 {
-  font-size: scale-text(3);
+  font-size: scale-text(4);
 }
 
 h2 {
-  font-size: scale-text(2);
+  font-size: scale-text(3);
 }
 
 h3 {
+  font-size: scale-text(2);
+}
+
+h4 {
   font-size: scale-text(1);
 }
 
-.small {
+small {
   font-size: scale-text(-1);
 }
 
 $type-scale: (
-  -1: 0.75rem,
-  0: 1rem,
-  1: 1.125rem,
-  2: 1.266rem,
-  3: 1.424rem
+    -1: pow($scale, -1) * $base-font-size,
+    0: $base-font-size,
+    1: pow($scale, 1) * $base-font-size,
+    2: pow($scale, 2) * $base-font-size,
+    3: pow($scale, 3) * $base-font-size,
+    4: pow($scale, 4) * $base-font-size
 );
 
 @function scale-text($by) {
