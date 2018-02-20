@@ -1,15 +1,24 @@
 @import '_base';
+@import '_type-scale';
 
 @mixin set-element-columns($start, $end) {
   grid-column: #{$start} / #{$end};
 }
 
-@mixin module-starting-at($start, $size) {
-  grid-column: #{$start} / #{$start + $size};
+@mixin set-element-rows($start, $end) {
+  grid-row: #{$start} / #{$end};
+}
+
+@mixin module-spread-across($start, $size) {
+  @include set-element-columns(#{$start}, #{$start + $size});
+}
+
+@mixin module-spread-down($start, $size) {
+  @include set-element-rows(#{$start}, #{$start + $size});
 }
 
 @mixin spread-grid-element() {
-  @include set-element-columns(1, 4);
+  @include set-element-columns(1, 5);
 }
 
 @mixin center-grid-element() {
@@ -19,24 +28,34 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 10vh) 1fr;
   grid-gap: 1rem;
   margin: auto 5vw;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 10vh) 1fr;
+  min-height: 90vh;
+
+  @include break($for-large-view) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10vh 1fr 10vh;
+  }
 }
 
 .logo {
-  @include spread-grid-element();
   @include center-grid-element();
-}
-
-.content {
   @include spread-grid-element();
+
+  @include break($for-large-view) {
+    @include module-spread-across(1, 1);
+  }
 }
 
 .horizontal-navigation {
   @include spread-grid-element();
   @include center-grid-element();
+
+  @include break($for-large-view) {
+    @include module-spread-across(4, 1);
+  }
 
   ul {
     list-style: none;
@@ -83,3 +102,19 @@ a:visited {
   color: $base-font-colour;
 }
 
+.hero {
+  @include spread-grid-element();
+
+  @include break($for-large-view) {
+    @include module-spread-across(1, 2);
+    align-self: center;
+  }
+}
+
+.content {
+  @include spread-grid-element();
+
+  @include break($for-large-view) {
+    @include module-spread-across(2, 1);
+  }
+}
