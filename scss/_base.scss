@@ -1,15 +1,27 @@
-$base-font-family: sans-serif;
+$base-font-family: 'Monteserrat', sans-serif;
 $base-font-size: 1rem;
 $base-font-colour: #222222;
-$interaction-colour: #0090ff;
+//$base-font-colour: white;
+//$interaction-colour: #0090ff;
+$interaction-colour: darken(orange, 5%);
 $base-line-height: 1.4;
-
 $scale: 1.333;
 
 $for-large-view: 56.25em;
+
+$hero-colour: #383042;
+$hero-font-colour: white;
 
 @mixin break($breakpoint) {
   @media only screen and (min-width: #{$breakpoint}) {
     @content;
   }
+}
+
+html {
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  color: $base-font-colour;
+  font-weight: 100;
+  background: whitesmoke;
 }

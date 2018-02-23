@@ -25,7 +25,7 @@
             <div class="contact-section">
                 <header>Connect</header>
                 <section>
-                    <p>hello@creativeedgeconsulting.com</p>
+                    <p><a href="mailto:hello@creativeedgeconsulting.com">hello@creativeedgeconsulting.com</a></p>
                     <p>778.896.0089</p>
                 </section>
             </div>
