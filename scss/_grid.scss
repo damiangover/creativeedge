@@ -25,7 +25,7 @@
 .grid-container {
   display: grid;
   grid-gap: 1rem;
-  margin: auto 5vw;
+  margin: 0 5vw;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 10vh) 1fr;
   min-height: 95vh;
@@ -35,83 +35,19 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 10vh 1fr 10vh;
   }
-}
 
-.hero-colours {
-  background: $hero-colour;
-  color: whitesmoke;
-}
+  &--front {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin: 5vh 5vw;
+    background: $hero-colour;
+    color: $hero-font-colour;
 
-.front--logo {
-  @include module-spread-across(2, 4);
-  font-size: scale-text(2);
-
-  @include break($for-large-view) {
-    @include module-spread-across(1, 3);
-    font-size: scale-text(2);
+    @include break($for-large-view) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 10vh repeat(2, 1fr);
+    }
   }
-}
-
-.front--hero {
-  @include module-spread-across(1, 4);
-  @include module-spread-down(3, 1);
-
-  @include break($for-large-view) {
-    @include module-spread-across(1, 2);
-    font-size: scale-text(2);
-  }
-}
-
-.front--large {
-  font-size: scale-text(4);
-}
-
-.front--define {
-  font-size: scale-text(1);
-}
-
-.orange {
-  color: orange;
-}
-
-.cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  overflow: hidden;
-  background: $hero-colour;
-  color: $hero-font-colour;
-}
-
-.grid-container--front {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 10vh) 1fr;
-  min-height: 100vh;
-  margin: 5vh 5vw;
-  background: $hero-colour;
-  color: $hero-font-colour;
-
-  @include break($for-large-view) {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 10vh repeat(2, 1fr);
-  }
-}
-
-#pre {
-  z-index: 1;
-}
-
-.loaded {
-  transform: translateY(-100%);
-  visibility: hidden;
-  transition: all 1s cubic-bezier(0.7,0,0.3,1);
-}
-
-p > a {
-  color: $interaction-colour;
 }
