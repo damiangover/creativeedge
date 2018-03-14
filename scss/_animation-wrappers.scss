@@ -1,0 +1,45 @@
+@import "_animation";
+
+.animate-text {
+    &--2s {
+        @include fadein(2);
+    }
+
+    &--3s {
+        @include fadein(3);
+    }
+
+    &--4s {
+        @include fadein(4);
+    }
+}
+
+.animate-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 200ms, opacity 200ms;
+}
+
+.fadeInFromBottom {
+    color: blue;
+    
+    &--1s {
+        @include fadeInWithColour(1);
+    }
+
+    &--2s {
+        @include fadeInWithColour(2);
+    }
+
+    &--3s {
+        @include fadeInWithColour(3);
+    }
+
+    &--4s {
+        @include fadeInWithColour(4);
+    }
+
+    &--5s {
+        @include fadeInWithColour(5);
+    }
+}

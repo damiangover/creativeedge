@@ -1,118 +1,47 @@
 @mixin fadein($val) {
-  animation: fadein #{$val}s;
+    animation: fadein #{$val}s;
 }
 
-@mixin fadeInWithColour ($val) {
-  animation: fadeInWithColour #{$val}s;
-}
-.animate-text
-{
-  &--2s {
-    @include fadein(2);
-  }
-
-  &--3s {
-    @include fadein(3);
-  }
-
-  &--4s {
-    @include fadein(4);
-  }
+@mixin fadeInWithColour($val) {
+    animation: fadeInWithColour #{$val}s;
 }
 
-.animate-out {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 200ms, opacity 200ms;
-}
-
-//.animate-colour-background {
-//  color: white;
-//  background: linear-gradient(-45deg, red, orange);
-//  background-size: 400% 400%;
-//  -webkit-animation: gradient 10s ease infinite;
-//  -moz-animation: gradient 10s ease infinite;
-//  animation: gradient 10s ease infinite;
-//}
-
-
-//.fadeInFromBottom {
-//  &--1s {
-//    @include fadeInFromBottom(1);
-//  }
-//
-//  &--2s {
-//    @include fadeInFromBottom(2);
-//  }
-//
-//  &--3s {
-//    @include fadeInFromBottom(3);
-//  }
-//
-//  &--4s {
-//    @include fadeInFromBottom(4);
-//  }
-//
-//  &--5s {
-//    @include fadeInFromBottom(5);
-//  }
-//}
-
-.fadeInFromBottom {
-  &--1s {
-    @include fadeInWithColour(1);
-  }
-
-  &--2s {
-    @include fadeInWithColour(2);
-  }
-
-  &--3s {
-    @include fadeInWithColour(3);
-  }
-
-  &--4s {
-    @include fadeInWithColour(4);
-  }
-
-  &--5s {
-    @include fadeInWithColour(5);
-  }
-}
-
-  @keyframes fadeInWithColour {
+@keyframes fadeInWithColour {
     0% {
-      opacity: 0;
-      color: whitesmoke;
+        opacity: 0;
+        color: whitesmoke;
     }
 
     50% {
-      color: orange;
+        color: orange;
     }
 
     100% {
-      opacity: 1;
-      color: whitesmoke;
+        opacity: 1;
+        color: whitesmoke;
     }
-  }
+}
 
-  @keyframes fadein {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:1;
-  }
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
