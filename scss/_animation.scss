@@ -1,0 +1,47 @@
+@mixin fadein($val) {
+    animation: fadein #{$val}s;
+}
+
+@mixin fadeInWithColour($val) {
+    animation: fadeInWithColour #{$val}s;
+}
+
+@keyframes fadeInWithColour {
+    0% {
+        opacity: 0;
+        color: whitesmoke;
+    }
+
+    50% {
+        color: orange;
+    }
+
+    100% {
+        opacity: 1;
+        color: whitesmoke;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

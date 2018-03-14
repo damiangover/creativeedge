@@ -24,7 +24,7 @@ add_action('init', 'register_custom_menus');
 
 function register_stylesheets() {
     wp_enqueue_style('ce_style', get_stylesheet_uri());
-    wp_enqueue_style('ce_font', 'https://fonts.googleapis.com/css?family=Montserrate|Crimson+Text|Lato');
+    wp_enqueue_style('ce_font', 'https://fonts.googleapis.com/css?family=Montserrat:100,300,400');
 }
 
 add_action('wp_enqueue_scripts', 'register_stylesheets');

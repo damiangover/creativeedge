@@ -1,0 +1,24 @@
+@import "_config";
+
+@mixin break($breakpoint) {
+    @media only screen and (min-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+html {
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+    color: $base-font-colour;
+    font-weight: $base-font-weight;
+    background: $hero-font-colour;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}

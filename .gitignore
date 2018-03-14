@@ -10,9 +10,22 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
+wp*/
+_ref-style.css
+.sass-cache/
+*.css.*
+*.css
+
+.vscode
+
+node_modules/
+.idea
+
 /.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
 
+
+\.DS_Store
