@@ -16,6 +16,8 @@ _ref-style.css
 *.css.*
 *.css
 
+.vscode
+
 node_modules/
 .idea
 
