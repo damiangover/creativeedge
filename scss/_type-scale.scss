@@ -1,4 +1,4 @@
-@import "_base";
+@import "_config";
 
 @function pow($base, $index) {
   $result: 1;
@@ -50,19 +50,3 @@ $type-scale: (
 @function scale-text($by) {
   @return map_get($type-scale, $by);
 }
-
-//@font-face {
-//  font-family: Graphik;
-//  src: url(../assets/fonts/Graphik-Regular.eot);
-//  src: url(../assets/fonts/Graphik-Regular.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Graphik-Regular.woff) format('woff'),url(../assets/fonts/Graphik-Regular.ttf) format('truetype'),url(../assets/fonts/Graphik-Regular.svg#bad6087e6b544a21c0bf58b844e74cb2) format('svg');
-//  font-style: normal;
-//  font-weight: 400
-//}
-//
-//@font-face {
-//  font-family: Graphik;
-//  src: url(../assets/fonts/Graphik-Medium.eot);
-//  src: url(../assets/fonts/Graphik-Medium.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Graphik-Medium.woff) format('woff'),url(../assets/fonts/Graphik-Medium.ttf) format('truetype'),url(../assets/fonts/Graphik-Medium.svg#79890569438fe27189629f56b9138446) format('svg');
-//  font-style: normal;
-//  font-weight: 700
-//}

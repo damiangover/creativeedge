@@ -1,7 +1,6 @@
-@import '_base';
-@import '_grid';
-@import '_type-scale';
-
+@import "_config";
+@import "_grid";
+@import "_type-scale";
 
 .logo {
   @include module-spread-across(1, 3);
@@ -9,22 +8,13 @@
   @include center-grid-element();
 
   img {
-    margin: 0;
-    padding: 0;
+      margin: 0;
+      padding: 0;
   }
 
   @include break($for-large-view) {
-    @include module-spread-across(1, 1);
-    @include center-grid-element();
-
-    //display: flex;
-    //align-items: center;
-
-    //&::before {
-    //  content: url("http://localhost:7888/wordpress/wp-content/uploads/2018/02/icon-sm.png");
-    //  margin: 0 0.75rem;
-    //  min-height: 100%;
-    //}
+      @include module-spread-across(1, 1);
+      @include center-grid-element();
   }
 }
 
@@ -34,42 +24,42 @@
   @include center-grid-element();
 
   @include break($for-large-view) {
-    @include module-spread-across(4, 2);
-    @include module-spread-down(1, 1);
+      @include module-spread-across(4, 2);
+      @include module-spread-down(1, 1);
   }
 
   ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
   }
 
   a {
-    position: relative;
-    text-decoration: none;
-    margin: 0 1.618rem;
-    padding: .382rem 0;
+      position: relative;
+      text-decoration: none;
+      margin: 0 1.618rem;
+      padding: .382rem 0;
   }
 
   a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: $interaction-colour;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.2s ease-in-out 0s;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $interaction-colour;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.2s ease-in-out 0s;
   }
 
   a:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
+      visibility: visible;
+      transform: scaleX(1);
   }
 }
 
@@ -79,21 +69,23 @@ a {
   transition: all 0.2s ease-in-out 0s;
 
   &:visited {
-    transition: inherit;
+      transition: inherit;
   }
 
   &:hover {
-    color: $interaction-colour;
-    transition: inherit;
+      color: $interaction-colour;
+      transition: inherit;
   }
 }
 
 .hero {
   @include module-spread-across(1, 3);
+  align-self: center;
 
   @include break($for-large-view) {
-    @include module-spread-across(2, 3);
-    align-self: center;
+      @include module-spread-across(2, 3);
+
+      align-self: center;
   }
 }
 
@@ -101,25 +93,33 @@ a {
   @include module-spread-across(1, 3);
 
   @include break($for-large-view) {
-    @include module-spread-across(2, 3);
-    @include module-spread-down(2, 1);
-    align-self: center;
-    text-align: center;
+      @include module-spread-across(2, 3);
+      @include module-spread-down(2, 1);
+
+      align-self: center;
+      text-align: center;
+  }
+}
+
+#post {
+  .hero {
+      font-size: scale-text(1);
   }
 }
 
 .content {
   @include module-spread-across(1, 3);
+
   max-width: 30em;
-  overflow: auto;
   height: 100%;
   width: 100%;
 
   @include break($for-large-view) {
-    @include module-spread-across(2, 3);
-    max-width: 56.25em;
-    height: 100%;
-    width: 100%;
+      @include module-spread-across(2, 3);
+
+      max-width: 56.25em;
+      height: 100%;
+      width: 100%;
   }
 }
 
@@ -129,8 +129,8 @@ a {
   list-style: none;
 
   li {
-    padding: 1.618rem 0;
-    margin: 0 0.382rem;
-    width: 100%;
+      padding: 1.618rem 0;
+      margin: 0 0.382rem;
+      width: 100%;
   }
 }

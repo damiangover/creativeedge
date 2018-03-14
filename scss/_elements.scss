@@ -1,66 +1,104 @@
-@import '_base.scss';
-@import '_grid.scss';
-@import '_type-scale';
-
-.hero-colours {
-  background: $hero-colour;
-  color: whitesmoke;
-}
+@import "_config.scss";
+@import "_grid.scss";
+@import "_type-scale";
 
 .front--logo {
-  @include module-spread-across(1, 4);
-  font-size: scale-text(2);
+    @include module-spread-across(1, 4);
 
-  @include break($for-large-view) {
-    @include module-spread-across(1, 3);
     font-size: scale-text(2);
-  }
+
+    @include break($for-large-view) {
+        @include module-spread-across(1, 3);
+
+        font-size: scale-text(2);
+    }
 }
 
 .front--hero {
-  @include module-spread-across(1, 4);
-  @include module-spread-down(3, 1);
-
-  @include break($for-large-view) {
     @include module-spread-across(1, 4);
-    font-size: scale-text(2);
-  }
+    @include module-spread-down(3, 1);
+
+    @include break($for-large-view) {
+        @include module-spread-across(1, 4);
+
+        font-size: scale-text(2);
+    }
 }
 
 .front--large {
-  font-size: scale-text(4);
+    font-size: scale-text(4);
 }
 
 .front--define {
-  font-size: scale-text(1);
+    font-size: scale-text(1);
 }
 
 .orange {
-  color: $interaction-colour;
+    color: $interaction-colour;
 }
 
 .cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  overflow: hidden;
-  background: $hero-colour;
-  color: $hero-font-colour;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: hidden;
+    background: $hero-colour;
+    color: $hero-font-colour;
 }
 
 #pre {
-  z-index: 1;
+    z-index: 1;
 }
 
 .loaded {
-  transform: translateY(-100%);
-  visibility: hidden;
-  transition: all 1s cubic-bezier(0.7,0,0.3,1);
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 p > a {
-  color: $interaction-colour;
+    color: $interaction-colour;
+}
+
+.left {
+    width: 100px;
+}
+
+.turn {
+    transform: rotate(90deg) translateY(0);
+    color: lighten($base-font-colour, 66%);
+    z-index: -1;
+}
+
+.services {
+    background-color: $hero-colour;
+    color: $hero-font-colour;
+    height: 100%;
+
+    @include module-spread-across(4, 2);
+    @include module-spread-down(2, 2);
+
+    z-index: -1;
+}
+
+˚
+.list-it {
+    color: $hero-font-colour;
+
+    @include module-spread-across(4, 2);
+    @include module-spread-down(2, 1);
+}
+
+.list-it > ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.list-it > ul > * {
+    max-width: 20vw;
 }
