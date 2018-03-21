@@ -102,3 +102,32 @@ p > a {
 .list-it > ul > * {
     max-width: 20vw;
 }
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    &-header {
+        @include module-spread-across(1, 1);
+        @include module-spread-down(1, 1);
+    }
+    
+    &-body {
+        @include module-spread-across(1, 1);
+        @include module-spread-down(2, 1);
+    }
+
+    &-group {
+        @include module-spread-across(2, 3);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        grid-template-rows: repeat(auto-fit, 1fr);
+    }
+
+    &-border {
+        border: 1px solid lightgray;
+        box-shadow: 0 6px 6px -6px  lightgray;
+    }
+}
