@@ -63,46 +63,6 @@ p > a {
     color: $interaction-colour;
 }
 
-.left {
-    width: 100px;
-}
-
-.turn {
-    transform: rotate(90deg) translateY(0);
-    color: lighten($base-font-colour, 66%);
-    z-index: -1;
-}
-
-.services {
-    background-color: $hero-colour;
-    color: $hero-font-colour;
-    height: 100%;
-
-    @include module-spread-across(4, 2);
-    @include module-spread-down(2, 2);
-
-    z-index: -1;
-}
-
-˚
-.list-it {
-    color: $hero-font-colour;
-
-    @include module-spread-across(4, 2);
-    @include module-spread-down(2, 1);
-}
-
-.list-it > ul {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-.list-it > ul > * {
-    max-width: 20vw;
-}
-
 .card {
     display: grid;
     grid-template-columns: 1fr;
