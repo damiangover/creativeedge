@@ -29,3 +29,4 @@ function register_stylesheets() {
 
 add_action('wp_enqueue_scripts', 'register_stylesheets');
 
+add_post_type_support( 'page', 'excerpt' );
