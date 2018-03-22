@@ -9,16 +9,16 @@
 @keyframes fadeInWithColour {
     0% {
         opacity: 0;
-        color: whitesmoke;
+        color: $hero-font-colour;
     }
 
     50% {
-        color: orange;
+        color: $interaction-colour;
     }
 
     100% {
         opacity: 1;
-        color: whitesmoke;
+        color: $hero-font-colour;
     }
 }
 
