@@ -1,7 +1,24 @@
+
+<?php if ( ! is_home() && ! is_front_page()) : ?>
+    <footer class="coloured-footer">
+        <?php
+            wp_nav_menu($args = array(
+                'theme_location' => 'footer',
+                'container' => 'div',
+                'container_class' => 'container-class',
+                'menu_class' => 'footer-menu',
+            ));
+        ?>
+        </div>
+</footer>
+<?php endif; ?>
+
 <!--<script src="js/vendor/modernizr-3.5.0.min.js"></script>-->
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script>
 <!--<script src="js/plugins.js"></script>-->
 <!--<script src="js/main.js"></script>-->
 

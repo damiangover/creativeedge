@@ -24,7 +24,7 @@ get_header();
     <?php foreach ($pages as $page) { ?>
         <div class="card">
             <a href="<?php echo get_permalink($page->ID); ?>" rel="bookmark" title="<?php echo $page->post_title; ?>">
-            <header class="card-header"><h2><?php echo $page->post_title; ?></h2></header>
+            <header class="card-header"><p><?php echo $page->post_title; ?></p></header>
             <section class="card-body"><?php $excerpt = get_the_excerpt( $page->ID ); echo $excerpt; ?></section>
             </a>
         </div>
