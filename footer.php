@@ -1,5 +1,4 @@
 
-<?php if ( ! is_home() && ! is_front_page()) : ?>
     <footer class="coloured-footer">
         <?php
             wp_nav_menu($args = array(
@@ -11,7 +10,6 @@
         ?>
         </div>
 </footer>
-<?php endif; ?>
 
 <!--<script src="js/vendor/modernizr-3.5.0.min.js"></script>-->
 
