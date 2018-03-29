@@ -27,11 +27,11 @@
   grid-gap: 1rem;
   min-height: 100vh;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 10vh) 80vh repeat(auto-fill, minmax(50vh, 1fr));
+  grid-template-rows: 10vh minmax(100vh, 1fr);
 
   @include break($for-large-view) {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 10vh 90vh repeat(auto-fill, minmax(10vh, 1fr));
+    grid-template-rows: 10vh minmax(100vh, 1fr);
   }
 
   &--front {
