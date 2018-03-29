@@ -55,10 +55,6 @@
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-p > a {
-    color: $interaction-colour;
-}
-
 .card {
     display: grid;
     grid-template-columns: 1fr;
