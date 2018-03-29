@@ -191,3 +191,14 @@
         font-size: scale-text(0);
     }
 }
+
+.contact {
+    display: flex;
+    flex-flow: column wrap;
+
+    &-section > header {
+        margin: 1.618rem 0;
+        font-size: scale-text(1);
+        color: $interaction-colour;
+    }
+}

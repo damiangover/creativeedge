@@ -34,16 +34,3 @@ img {
   padding: 1.618rem;
 }
 
-.contact {
-  display: flex;
-  flex-flow: column wrap;
-
-  &-section {
-    header {
-      margin: 1.618rem 0;
-      font-size: scale-text(0);
-      color: lighten($base-font-colour, 25%);
-    }
-  }
-}
-
