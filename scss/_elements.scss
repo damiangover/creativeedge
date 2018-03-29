@@ -65,30 +65,30 @@ p > a {
     grid-template-rows: 1fr;
     margin: 0 3rem;
     background-color: white;
-    align-self: flex-start;
     min-height: 25%;
-    text-align: center;
 
     &-header {
         @include module-spread-across(1, 1);
-        @include module-spread-down(1, 1);
-        font-size: 2.441rem;
+        font-size: scale-text(3);
     }
     
     &-body {
         @include module-spread-across(1, 1);
-        @include module-spread-down(2, 1);
+
     }
 
     &-group {
         @include module-spread-across(1, 5);
-        @include module-spread-down(3, 1);
 
-        display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
-        grid-template-rows: repeat(auto-fit, 1fr);
-        z-index: 1;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        min-height: 50vh;
+
+        @include break($for-large-view) {
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
     }
 
     &-border {
@@ -106,7 +106,7 @@ p > a {
     @include break($for-large-view) {
         @include module-spread-across(1, 4);
         @include module-spread-down(2, 1);
-        
+
         font-size: calc(1rem + 1vmax);
         align-self: center;
         margin: 0 3rem;
@@ -178,7 +178,7 @@ p > a {
     }
 }
 
-.footer-menu {    
+.footer-menu {
     @include module-spread-across(1, 5);
     display: flex;
     flex-flow: column nowrap;
