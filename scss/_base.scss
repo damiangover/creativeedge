@@ -28,7 +28,22 @@ body {
     background: $background-colour;
 }
 
-a:active {
-    outline: 2px solid $outline-colour-for-touch;
-    outline-offset: 0.75rem;
+a {
+    color: $base-font-colour;
+    text-decoration: none;
+    transition: all .3s ease-in-out 0s;
+
+    &:active {
+        outline: 2px solid $outline-colour-for-touch;
+        outline-offset: 0.75rem;
+    }
+
+    &:visited {
+        transition: inherit;
+    }
+
+    &:hover {
+        color: $interaction-colour;
+        transition: all .3s ease-in-out 0s;
+    }
 }
