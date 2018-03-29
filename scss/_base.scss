@@ -27,3 +27,8 @@ body {
     vertical-align: baseline;
     background: $background-colour;
 }
+
+a:active {
+    outline: 2px solid $outline-colour-for-touch;
+    outline-offset: 0.75rem;
+}
