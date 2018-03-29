@@ -25,9 +25,9 @@
 .grid-container {
   display: grid;
   grid-gap: 1rem;
-  min-height: 95vh;
+  min-height: 100vh;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 10vh 10vmin;
+  grid-template-rows: 10vh 10vh repeat(3, 1fr);
 
   @include break($for-large-view) {
     grid-template-columns: repeat(5, 1fr);

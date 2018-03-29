@@ -98,14 +98,18 @@ p > a {
 }
 
 .headline {
-    @include module-spread-across(1, 4);
-    @include module-spread-down(2, 1);
+    @include module-spread-across(1, 5);
+    @include module-spread-down(3, 2);
     
     align-self: center;
     display: flex;
     flex-flow: column nowrap;
     margin: 0 3rem;
     
+    @include break($for-large-view) {
+        @include module-spread-down(2, 1);
+    }
+
     &::after {
         content: "";
         width: 1.62rem;
@@ -128,18 +132,13 @@ p > a {
 
 .coloured-footer {
     @include module-spread-across(1, 5); 
-    @include module-spread-down(3, 1);
-
+    @include module-spread-down(5, 1);
     background-color: $hero-colour;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: 1rem;
 }
 
 .container-class {
-    @include module-spread-across(1, 5);
     align-self: center;
+    padding: 1rem;
 
     ul & {
         list-style: none;
@@ -157,7 +156,6 @@ p > a {
     & a {
         font-size: scale-text(-1);
         color: $interaction-colour;
-        padding-right: 3rem;
     }
 
     ul .sub-menu {
@@ -173,10 +171,14 @@ p > a {
 
 .footer-menu {    
     display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-    justify-content: space-around;
-    
+    flex-flow: column nowrap;
+
+    @include break($for-large-view) {
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content: space-around;
+    }
+
     & > li > a {
         font-size: scale-text(0);
     }
