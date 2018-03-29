@@ -132,12 +132,14 @@ p > a {
 
 .coloured-footer {
     @include module-spread-across(1, 5); 
-    @include module-spread-down(5, 1);
     background-color: $hero-colour;
 }
 
 .container-class {
-    align-self: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
     padding: 1rem;
 
     ul & {
@@ -164,19 +166,22 @@ p > a {
         padding: 0.75rem 0;
 
         a {
-            color: white;
+            color: $hero-font-colour;
         }
     }
 }
 
 .footer-menu {    
+    @include module-spread-across(1, 5);
     display: flex;
     flex-flow: column nowrap;
 
     @include break($for-large-view) {
+        @include module-spread-across(2, 3);
+
         flex-flow: row wrap;
         align-items: stretch;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     & > li > a {
