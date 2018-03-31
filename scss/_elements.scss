@@ -18,19 +18,19 @@
     &-body {
         @include module-spread-across(1, 1);
 
-    }
+}
 
     &-group {
-        @include module-spread-across(1, 5);
+    @include module-spread-across(1, 5);
 
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-around;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
         min-height: 50vh;
 
-        @include break($for-large-view) {
+    @include break($for-large-view) {
             flex-flow: row nowrap;
-            justify-content: space-around;
+        justify-content: space-around;
         }
     }
 
@@ -41,7 +41,7 @@
 }
 
 .headline {
-    @include module-spread-across(1, 4);
+    @include module-spread-across(1, 5);
     display: flex;
     flex-flow: column nowrap;
     margin: 3rem;
