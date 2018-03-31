@@ -98,7 +98,7 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
-    padding: 1rem;
+    padding: 1rem 0;
 
     ul & {
         list-style: none;
