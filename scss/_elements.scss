@@ -135,11 +135,11 @@
     flex-flow: column nowrap;
 
     @include break($for-large-view) {
-        @include module-spread-across(2, 3);
+        @include module-spread-across(1, 5);
 
         flex-flow: row wrap;
         align-items: stretch;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     & > li > a {
