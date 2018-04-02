@@ -21,16 +21,16 @@
 }
 
     &-group {
-    @include module-spread-across(1, 5);
+        @include module-spread-across(1, 5);
 
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
         min-height: 50vh;
 
-    @include break($for-large-view) {
+        @include break($for-large-view) {
             flex-flow: row nowrap;
-        justify-content: space-around;
+            justify-content: space-around;
         }
     }
 
@@ -157,15 +157,20 @@
         color: $interaction-colour;
     }
 }
+
 .subscribe {
     @include module-spread-across(2, 3);
-    border-top: 0.05em lightgrey solid;
-    align-self: center;
     background-color: transparent;
+    align-self: center;
+    min-height: 15vh;
+    max-width: $max-reading-width;
+    
+    &--top-border {
+        border-top: 0.05em solid #ccc; 
+    }
 }
 
 .big-button {
-    width: 25%;
     background-color: $interaction-colour;
     border-radius: 4px;
     box-shadow: none;
@@ -179,6 +184,10 @@
     padding: 1.05em;
     text-decoration: none;
     white-space: nowrap;
+
+    @include break($for-large-view) {
+        width: 25%;
+    }
 }
 
 .big-button:hover {
