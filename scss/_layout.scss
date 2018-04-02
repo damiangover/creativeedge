@@ -99,15 +99,13 @@
 }
 
 .content {
-  @include module-spread-across(2, 3);
-  height: 100%;
+    @include module-spread-across(2, 3);
+    height: 100%;
 
-  @include break($for-large-view) {
-      @include module-spread-across(2, 3);
-
-      max-width: $max-reading-width;
-      height: 100%;
-  }
+    @include break($for-large-view) {
+        max-width: $max-reading-width;
+        height: 100%;
+    }
 }
 
 .archive-list {
