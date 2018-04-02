@@ -99,42 +99,15 @@
 }
 
 .content {
-    @include module-spread-across(1, 5);
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  @include module-spread-across(2, 3);
+  height: 100%;
 
-    @include break($for-large-view) {
-        @include module-spread-across(2, 3);
-        max-width: $max-reading-width;
-        height: 100%;
+  @include break($for-large-view) {
+      @include module-spread-across(2, 3);
 
-        & div {
-            max-width: 20em;
-            margin: 0;
-            padding: 0;
-    
-            & img {
-                float: left;
-                margin: 0;
-                padding: 0;
-                max-width: 20em;
-            }
-        }
-    }
-
-    & div {
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-
-        & img {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: auto;
-        }
-    }
+      max-width: $max-reading-width;
+      height: 100%;
+  }
 }
 
 .archive-list {
