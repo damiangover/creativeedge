@@ -36,8 +36,9 @@
 
 <body>
 <div class="grid-container">
-   <div class="logo"><a href="http://localhost:7888/wordpress/?page_id=39"/>
-   <h3>Creative Edge Consulting</h3></a></div>
+    <div class="logo">
+        <a href="http://localhost:7888/wordpress/?page_id=39"/>Creative Edge Consulting</a>
+    </div>
     <!-- <div class="logo">
         <a href="http://localhost:7888/wordpress/?page_id=39">
             <img src="http://localhost:7888/wordpress/wp-content/uploads/2018/02/icon-sm.png"/>
