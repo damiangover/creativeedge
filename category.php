@@ -8,9 +8,13 @@
                 $is_first_post = true;
                 $active_category = get_category( get_query_var( 'cat' ) );
                 $active_category_id = $active_category->cat_ID;
-                query_posts($query_string .'&posts_per_page=10');
+                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                $args = array(
+                    'posts_per_page' => 1,
+                    'paged'          => $paged
+                );
+                $the_query = new WP_Query( $args );
             ?>
-           
         </header>
 
         <div class="related-post--container">
