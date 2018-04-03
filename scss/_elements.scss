@@ -224,7 +224,7 @@ form .big-text {
     min-width: 33%;
     max-width: 45%;
     flex: 1 1 auto;
-
+    
     &--container {
         display: flex;
         flex-flow: row wrap;
@@ -234,4 +234,27 @@ form .big-text {
     &--full-width {
         flex: 0 0 100%;
     }
+}
+
+h2.screen-reader-text {
+    font-size: 0;
+    visibility: hidden;
+}
+
+.page-numbers {
+    display: inline-block;
+    margin: 1rem;
+    text-decoration: none;
+    vertical-align: middle;
+    
+    &.current {
+        cursor: not-allowed;
+        border-bottom: 2px solid $interaction-colour;
+    }
+}
+
+div.nav-links {
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
 }
