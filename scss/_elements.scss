@@ -17,8 +17,7 @@
     
     &-body {
         @include module-spread-across(1, 1);
-
-}
+    }
 
     &-group {
         @include module-spread-across(1, 5);
@@ -224,7 +223,7 @@ form .big-text {
     min-width: 33%;
     max-width: 45%;
     flex: 1 1 auto;
-    
+
     &--container {
         display: flex;
         flex-flow: row wrap;
