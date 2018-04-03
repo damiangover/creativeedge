@@ -7,8 +7,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     margin: 0 3rem;
-    background-color: white;
-    min-height: 25%;
+    background-color: $background-colour;
+    flex: 1 1 auto;
 
     &-header {
         @include module-spread-across(1, 1);
@@ -23,13 +23,14 @@
         @include module-spread-across(1, 5);
 
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         justify-content: space-around;
-        min-height: 50vh;
+        z-index: 2;
+        padding: 1.618rem 0;
+        min-height: 40vh;
 
         @include break($for-large-view) {
-            flex-flow: row nowrap;
-            justify-content: space-around;
+            flex-flow: row wrap;
         }
     }
 
@@ -56,7 +57,7 @@
 
     &::after {
         content: "";
-        width: 2ch;
+        width: 1.618rem;
         border-bottom: .168rem solid $interaction-colour;
     }
 
@@ -256,4 +257,8 @@ div.nav-links {
     display: flex;
     flex-flow: row wrap;
     align-self: center;
+}
+
+.top-read {
+    font-size: scale-text(1);
 }
