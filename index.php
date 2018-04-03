@@ -39,6 +39,13 @@ get_header();
                     ?>
                 </section>
             </article>
+            <aside class="post-nav">
+                <?php
+                    previous_post_link('<span class="post-nav--child">&horbar; %link</span>');
+                    next_post_link('<span class="post-nav--child">%link &horbar;</span>');
+                ?>                           
+                <div class="clearfix"></div>
+            </aside>
 
         <?php endwhile; endif; ?>
     </main>
