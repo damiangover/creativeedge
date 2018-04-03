@@ -30,3 +30,19 @@ function register_stylesheets() {
 add_action('wp_enqueue_scripts', 'register_stylesheets');
 
 add_post_type_support( 'page', 'excerpt' );
+
+function paginate( $query ) {
+
+    if (!is_admin() && $query->is_main_query()){
+    
+      if(is_home()){
+        $query->set('posts_per_page', 10);
+      }
+
+      if(is_category()){
+        $query->set('posts_per_page', 5);
+      }
+    }
+  }
+
+  add_action( 'pre_get_posts', 'paginate' );
