@@ -14,6 +14,11 @@
   @return $result;
 }
 
+.center-text {
+  text-align: center;
+  align-self: center;
+}
+
 body {
   font-size: scale-text(0);
 }
