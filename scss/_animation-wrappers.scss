@@ -21,8 +21,6 @@
 }
 
 .fadeInFromBottom {
-    color: blue;
-    
     &--1s {
         @include fadeInWithColour(1);
     }
