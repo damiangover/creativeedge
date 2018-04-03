@@ -2,11 +2,13 @@
 
     <main class="browse animate-text--2s">
         <header>
+
+            <h1 class="center-text"><?php single_cat_title(); ?></h1>
             <?php
                 $active_category = get_category( get_query_var( 'cat' ) );
                 $active_category_id = $active_category->cat_ID;
-                    echo category_description( $active_category_id );
-                    query_posts($query_string .'&posts_per_page=3');  ?>
+                query_posts($query_string .'&posts_per_page=10');
+            ?>
            
         </header>
 
