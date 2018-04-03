@@ -47,6 +47,7 @@ gulp.task('browser-sync::start', function () {
         browser: ["chrome", "firefox"]
     });
     gulp.watch(source.build + '*.css').on("change", browserSync.reload);
+    gulp.watch(source.build + '*.php').on("change", browserSync.reload);
 });
 
 gulp.task('sass::compile', function () {
