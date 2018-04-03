@@ -23,8 +23,8 @@
                     <article class="related-post--full-width">
                         <header class="entry-header post-heading">
                             <?php
-                            the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
-                        ?>
+                                the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+                            ?>
                         </header>
                         <div class="excerpt longer-read"><?php the_excerpt(); ?></div>
                     </article>
@@ -32,15 +32,22 @@
                     <article class="related-post">
                         <header class="entry-header post-heading">
                             <?php
-
                                 the_title('<h3 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>');
-
                             ?>
                         </header>
                         <div class="excerpt longer-read"><?php the_excerpt(); ?></div>
                     </article>
+                <?php endif; endwhile; ?>
+            <?php else : ?>
+                <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
             <?php endif; ?> 
-            <?php endwhile; endif; ?>
+            <div class="related-post--full-width">
+                <?php the_posts_pagination( 
+                    array('mid_size' => 2,
+                    'prev_text' => __( '&horbar;', 'textdomain' ),
+                    'next_text' => __( '&horbar;', 'textdomain' ),
+                )); ?>
+            </div>
         </div>
     </main>
 
