@@ -219,3 +219,18 @@ fieldset {
 form .big-text {
     width: 70%;
 }
+
+.related-post {
+    max-width: 33%;
+    flex: 1 1 auto;
+
+    &--container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    &--full-width {
+        flex: 0 0 100%;
+    }
+}
