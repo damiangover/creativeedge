@@ -1,19 +1,14 @@
 <?php get_header(); ?>
 
-    <div class="content grid-item--center animate-text--2s">
-        <main>
-            <div class="category-blurb">
-                <section>
-                    <h1><?php single_cat_title(); ?></h1>
+    <main class="browse animate-text--2s">
+        <header>
             <?php
                 $active_category = get_category( get_query_var( 'cat' ) );
                 $active_category_id = $active_category->cat_ID;
                     echo category_description( $active_category_id );
                     query_posts($query_string .'&posts_per_page=3');  ?>
-                </section>
-            </div>
            
-            <div class="related-post-container">
+        </header>
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -38,5 +33,5 @@
             <?php endwhile; endif; ?>
         </div>
     </main>
-    </div>
+
 <?php get_footer(); ?>
