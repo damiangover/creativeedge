@@ -57,7 +57,7 @@ gulp.task('sass::compile', function () {
 });
 
 gulp.task('ce::watch', function () {
-    gulp.watch(source.root + "*.*", ['css::prepare', 'php::move']);
+    gulp.watch(source.root + "*.*", ['css::prepare']);
     gulp.watch(source.root + "/scss/*.scss", ['sass::compile']);
 });
 
