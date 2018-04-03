@@ -221,7 +221,8 @@ form .big-text {
 }
 
 .related-post {
-    max-width: 33%;
+    min-width: 33%;
+    max-width: 45%;
     flex: 1 1 auto;
 
     &--container {
