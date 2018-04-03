@@ -34,18 +34,16 @@
     grid-template-rows: 10vh minmax(90vh, 1fr);
   }
 
-  &--front {
+  &--blog {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    margin: 5vh 5vw;
-    background: $hero-colour;
-    color: $hero-font-colour;
-
+    min-height: 100vh;
+    grid-template-columns: 5vw repeat(3, 1fr) 5vw;
+    grid-template-rows: 10vh 10vh;
+  
     @include break($for-large-view) {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: 10vh repeat(2, 1fr);
+      grid-template-rows: 10vh;
     }
   }
 }
