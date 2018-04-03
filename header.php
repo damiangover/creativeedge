@@ -35,7 +35,13 @@
 </head>
 
 <body>
-<div class="grid-container">
+    <?php if ( is_single() ) : ?>
+        <div class="grid-container--blog">
+    <?php else : ?>
+        <div class="grid-container">
+    <?php endif ?>
+        
+        
     <div class="logo">
         <a href="http://localhost:7888/wordpress/?page_id=39"/>Creative Edge Consulting</a>
     </div>
