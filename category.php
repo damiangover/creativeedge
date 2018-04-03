@@ -18,29 +18,28 @@
         </header>
 
         <div class="related-post--container">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <?php if ( $is_first_post ) : ?>
-                <article class="related-post--full-width">
-                    <header class="entry-header post-heading">
-                        <?php
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <?php if ( $is_first_post ) : $is_first_post = false; ?>
+                    <article class="related-post--full-width">
+                        <header class="entry-header post-heading">
+                            <?php
                             the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
                         ?>
-                    </header>
-                    <div class="excerpt longer-read"><?php the_excerpt(); ?></div>
-                </article>
-                <?php $is_first_post = false; ?>
-            <?php else: ?>
-                <article class="related-post">
-                    <header class="entry-header post-heading">
-                        <?php
+                        </header>
+                        <div class="excerpt longer-read"><?php the_excerpt(); ?></div>
+                    </article>
+                <?php else: ?>
+                    <article class="related-post">
+                        <header class="entry-header post-heading">
+                            <?php
 
-                            the_title('<h3 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>');
+                                the_title('<h3 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>');
 
-                        ?>
-                    </header>
-                    <div class="excerpt longer-read"><?php the_excerpt(); ?></div>
-                </article>
-            <?php endif; ?>
+                            ?>
+                        </header>
+                        <div class="excerpt longer-read"><?php the_excerpt(); ?></div>
+                    </article>
+            <?php endif; ?> 
             <?php endwhile; endif; ?>
         </div>
     </main>
