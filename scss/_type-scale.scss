@@ -19,19 +19,35 @@ body {
 }
 
 h1 {
-  font-size: scale-text(4);
+  font-size: scale-text(2);
+
+  @include break($for-large-view) {
+    font-size: scale-text(4);  
+  }
 }
 
 h2 {
-  font-size: scale-text(3);
+  font-size: scale-text(1); 
+
+  @include break($for-large-view) {
+    font-size: scale-text(3); 
+  }
 }
 
 h3 {
-  font-size: scale-text(2);
+  font-size: scale-text(0);  
+
+  @include break($for-large-view) {
+    font-size: scale-text(2);
+  }
 }
 
 h4 {
-  font-size: scale-text(1);
+  font-size: scale-text(0);
+
+  @include break($for-large-view) {
+    font-size: scale-text(1);
+  }
 }
 
 small {
@@ -44,7 +60,8 @@ $type-scale: (
     1: pow($scale, 1) * $base-font-size,
     2: pow($scale, 2) * $base-font-size,
     3: pow($scale, 3) * $base-font-size,
-    4: pow($scale, 4) * $base-font-size
+    4: pow($scale, 4) * $base-font-size,
+    5: pow($scale, 5) * $base-font-size
 );
 
 @function scale-text($by) {

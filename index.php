@@ -38,18 +38,19 @@ get_header();
                     ));
                     ?>
                 </section>
-                <div class="author-details">
-                    <div class="gravatar">
-                        <?php echo get_avatar(get_the_author_meta("ID")); ?>
-                    </div>
-                    <small><?php the_author_meta('display_name'); ?></small>
-                </div>
-                </footer>
             </article>
 
         <?php endwhile; endif; ?>
-
     </main>
+    <div class="subscribe subscribe--top-border">
+        <p>Strategies for change. Straight to your inbox.</p>
+        <form>
+            <fieldset>
+                <input type="email" required placeholder="Email Address" class="big-text"/>
+                <input type="submit" value="Join" class="big-button"/>
+            </fieldset>
+        </form>
+    </div>
 <?php
 get_footer();
 ?>

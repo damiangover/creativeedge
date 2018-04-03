@@ -3,9 +3,12 @@
 @import "_type-scale";
 
 .logo {
-  @include module-spread-across(1, 3);
-  @include module-spread-down(1, 1);
-  @include center-grid-element();
+    @include module-spread-across(1, 5);
+    @include module-spread-down(1, 1);
+    align-self: center;
+    text-align: center;
+    font-size: scale-text(1);
+    font-weight: 600;
 
   img {
       margin: 0;
@@ -13,13 +16,16 @@
   }
 
   @include break($for-large-view) {
-      @include module-spread-across(1, 1);
-      @include center-grid-element();
+    @include module-spread-across(1, 3);
+    font-size: scale-text(2);
+    font-weight: 600;      
+    margin: 0 3rem;
+    text-align: left;
   }
 }
 
 .horizontal-navigation {
-  @include module-spread-across(1, 3);
+  @include module-spread-across(1, 5);
   @include module-spread-down(2, 1);
   @include center-grid-element();
 
@@ -63,21 +69,6 @@
   }
 }
 
-a {
-  color: $base-font-colour;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out 0s;
-
-  &:visited {
-      transition: inherit;
-  }
-
-  &:hover {
-      color: $interaction-colour;
-      transition: inherit;
-  }
-}
-
 .hero {
   @include module-spread-across(1, 3);
   align-self: center;
@@ -89,18 +80,6 @@ a {
   }
 }
 
-.front {
-  @include module-spread-across(1, 3);
-
-  @include break($for-large-view) {
-      @include module-spread-across(2, 3);
-      @include module-spread-down(2, 1);
-
-      align-self: center;
-      text-align: center;
-  }
-}
-
 #post {
   .hero {
       font-size: scale-text(1);
@@ -108,19 +87,13 @@ a {
 }
 
 .content {
-  @include module-spread-across(1, 3);
+    @include module-spread-across(2, 3);
+    height: 100%;
 
-  max-width: 30em;
-  height: 100%;
-  width: 100%;
-
-  @include break($for-large-view) {
-      @include module-spread-across(2, 3);
-
-      max-width: 56.25em;
-      height: 100%;
-      width: 100%;
-  }
+    @include break($for-large-view) {
+        max-width: $max-reading-width;
+        height: 100%;
+    }
 }
 
 .archive-list {

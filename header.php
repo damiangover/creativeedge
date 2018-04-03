@@ -35,13 +35,21 @@
 </head>
 
 <body>
-<div class="grid-container">
-<!--    <div class="logo">Creative Edge</div>-->
+    <?php if ( is_single() ) : ?>
+        <div class="grid-container--blog">
+    <?php else : ?>
+        <div class="grid-container">
+    <?php endif ?>
+        
+        
     <div class="logo">
+        <a href="http://localhost:7888/wordpress/?page_id=39"/>Creative Edge Consulting</a>
+    </div>
+    <!-- <div class="logo">
         <a href="http://localhost:7888/wordpress/?page_id=39">
             <img src="http://localhost:7888/wordpress/wp-content/uploads/2018/02/icon-sm.png"/>
         </a>
-    </div>
+    </div> -->
     <?php
     wp_nav_menu($args = array(
         'theme_location' => 'primary',

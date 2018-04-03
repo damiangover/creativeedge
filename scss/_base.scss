@@ -6,6 +6,11 @@
     }
 }
 
+:root {
+    background-color: $hero-colour;
+    font-size: $base-font-size;
+}
+
 html {
     font-family: $base-font-family;
     line-height: $base-line-height;
@@ -18,7 +23,52 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    background: $background-colour;
+}
+
+a {
+    color: $base-font-colour;
+    text-decoration: none;
+    transition: all .3s ease-in-out 0s;
+
+    &:active {
+        outline: 2px solid $outline-colour-for-touch;
+        outline-offset: 0.75rem;
+    }
+
+    &:visited {
+        transition: inherit;
+    }
+
+    &:hover {
+        color: $interaction-colour;
+        transition: all .3s ease-in-out 0s;
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
 }
