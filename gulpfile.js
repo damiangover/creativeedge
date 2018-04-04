@@ -47,6 +47,7 @@ gulp.task('browser-sync::start', function () {
         browser: ["chrome", "firefox"]
     });
     gulp.watch(source.build + '*.css').on("change", browserSync.reload);
+    gulp.watch(source.build + '*.php').on("change", browserSync.reload);
 });
 
 gulp.task('sass::compile', function () {
@@ -56,7 +57,7 @@ gulp.task('sass::compile', function () {
 });
 
 gulp.task('ce::watch', function () {
-    gulp.watch(source.root + "*.*", ['css::prepare', 'php::move']);
+    gulp.watch(source.root + "*.*", ['css::prepare']);
     gulp.watch(source.root + "/scss/*.scss", ['sass::compile']);
 });
 
