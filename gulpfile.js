@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create();
 
 const source = {
     root: "./",
-    build: "./wp-creativeedge/",
+    build: "./",
     mamp: ""
 };
 
@@ -54,7 +54,7 @@ gulp.task('sass::compile', function () {
     return gulp.src(source.root + "/scss/*.scss")
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(source.root));
-});
+})
 
 gulp.task('ce::watch', function () {
     gulp.watch(source.root + "*.*", ['css::prepare']);
