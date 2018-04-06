@@ -1,14 +1,15 @@
-<?php get_header(); ?>
+<?php 
+// Template Name: Research Template
+get_header(); 
+?>
 
     <main class="browse">
-        <header>
-            <!-- <h1 class="center-text"><?php single_cat_title(); ?></h1> -->
-            <?php
-                $is_first_post = true;
-                $active_category = get_category( get_query_var( 'cat' ) );
-                $active_category_id = $active_category->cat_ID;
-            ?>
-        </header>
+        <?php
+            $is_first_post = true;
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array( 'post_type' => 'post', 'posts_per_page' => 9, 'paged' => $paged, 'category_name' => 'crisis');
+            $wp_query = new WP_Query($args);
+        ?>
 
         <div class="related-post--container">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -31,12 +32,8 @@
                         <div class="excerpt"><?php the_excerpt(); ?></div>
                     </article>
                 <?php endif; endwhile; ?>
-                <div class="related-post--page-nums">
-                    <?php the_posts_pagination( 
-                        array('mid_size' => 0,
-                        'prev_text' => __( '&horbar;', 'textdomain' ),
-                        'next_text' => __( '&horbar;', 'textdomain' ),
-                    )); ?>
+                <div class="related-post--full-width and-flex">
+                    <?php the_posts_pagination(); ?>
                 </div>
             <?php else : ?>
                 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
@@ -53,4 +50,4 @@
         </form>
     </aside>
 
-<?php get_footer(); ?>
+<?php wp_reset_postdata(); get_footer(); ?>

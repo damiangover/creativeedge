@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-    <main class="content animate-text--2s">
+    <main class="content">
         <ul class="archive-list">
         <?php wp_get_archives(array( 'type' => 'postbypost', 'limit' => 20, 'format' => 'custom', 'before' => '<li class="my-post-title">', 'after' => '</li>' ) ); ?>
         </ul>

@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,26 +35,10 @@
 </head>
 
 <body>
-    <?php if ( is_single() ) : ?>
-        <div class="grid-container--blog">
+    
+    <?php if ( is_front_page()) : ?>
+        <div class="grid">
     <?php else : ?>
-        <div class="grid-container">
+        <div class="grid-container--blog">
+        <div class="second-logo"><a href="./">Creative Edge Consulting</a></div>
     <?php endif ?>
-        
-        
-    <div class="logo">
-        <a href="http://localhost:7888/wordpress/?page_id=39"/>Creative Edge Consulting</a>
-    </div>
-    <!-- <div class="logo">
-        <a href="http://localhost:7888/wordpress/?page_id=39">
-            <img src="http://localhost:7888/wordpress/wp-content/uploads/2018/02/icon-sm.png"/>
-        </a>
-    </div> -->
-    <?php
-    wp_nav_menu($args = array(
-        'theme_location' => 'primary',
-        'container' => 'nav',
-        'container_class' => 'horizontal-navigation',
-        'menu_class' => 'flatten',
-    ));
-    ?>

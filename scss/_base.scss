@@ -17,6 +17,10 @@ html {
     color: $base-font-colour;
     font-weight: $base-font-weight;
     background: $background-colour;
+
+    * h1, h2, h3, h4, h5, h6 {
+        font-weight: $bold-font-weight;
+    }
 }
 
 body {

@@ -1,16 +1,17 @@
-<?php get_header(); ?>
+<?php 
+// Template Name: Blog Template
+get_header(); 
+?>
 
     <main class="browse">
-        <header>
-            <!-- <h1 class="center-text"><?php single_cat_title(); ?></h1> -->
-            <?php
-                $is_first_post = true;
-                $active_category = get_category( get_query_var( 'cat' ) );
-                $active_category_id = $active_category->cat_ID;
-            ?>
-        </header>
+        <?php
+            $is_first_post = true;
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array( 'post_type' => 'post', 'posts_per_page' => 9, 'paged' => $paged );
+            $wp_query = new WP_Query($args);
+        ?>
 
-        <div class="related-post--container">
+         <div class="related-post--container">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <?php if ( $is_first_post ) : $is_first_post = false; ?>
                     <article class="related-post--top-read">
@@ -53,4 +54,4 @@
         </form>
     </aside>
 
-<?php get_footer(); ?>
+<?php wp_reset_postdata(); get_footer(); ?>

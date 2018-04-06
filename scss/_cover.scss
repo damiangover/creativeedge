@@ -15,44 +15,60 @@
 
   display: grid;
   grid-gap: 1rem;
-  min-height: 100vh;
-  grid-template-columns: 5vw repeat(3, 1fr) 5vw;
+  max-height: 100vh;
+  grid-template-columns: 2.5vw repeat(3, 1fr) 2.5vw;
   grid-template-rows: 10vh repeat(4, 1fr);
   background-color: $hero-colour;
   color: $hero-font-colour;
 
-  @include break($for-large-view) {
-    grid-template-columns: repeat(5, 1fr);
+  &--logo {
+    @include break($for-large-view) {
+      font-size: scale-text(1);
+      text-align: left;
+    }
+
+    @include module-spread-across(2, 3);
+    @include module-spread-down(1, 1);
+    
+    align-self: center;
+    font-size: scale-text(1);
+    text-align: center;
   }
-}
 
-.front {
-  @include module-spread-across(1, 5);
-  @include module-spread-down(4, 1);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  margin: 0 3rem;
+  &--alchemy {
+    @include break($for-large-view) {
+      @include module-spread-across(2, 3);
+      @include module-spread-down(4, 2);
+    }
 
-  &--large {
-    font-size: scale-text(2);
+    @include module-spread-across(2, 3);
+    @include module-spread-down(5, 1);
+    
+    align-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: scale-text(0);
+    justify-content: space-around;
+  }
 
+  &--title {
     @include break($for-large-view) {
       font-size: scale-text(4);
     }
+
+    font-size: scale-text(2);
   }
 
-  &--define {
-    font-size: scale-text(0);
-    
+  &--definition {
     @include break($for-large-view) {
-      font-size: scale-text(3);
+      font-size: scale-text(2);
     }
   }
 }
 
 .accent {
   color: $interaction-colour;
+  font-weight: $base-font-weight;
 }
 
 #pre {
@@ -60,7 +76,8 @@
 }
 
 .loaded {
-  transform: translateY(-100%);
+  transform: translate3d(100%, 0, 0);
   visibility: hidden;
   transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  z-index: -1;
 }

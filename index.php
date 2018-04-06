@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-    <main class="content animate-text--2s">
+    <main class="content">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -14,7 +14,7 @@ get_header();
                     } elseif (is_front_page() && is_home()) {
                         the_title('<h1 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h1>');
                     } else {
-                        the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+                        the_title('<h1 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h1>');
                     }
                     ?>
                     <div class="post-meta">
@@ -38,18 +38,16 @@ get_header();
                     ));
                     ?>
                 </section>
-            </article>
-            <aside class="post-nav">
-                <?php
-                    previous_post_link('<span class="post-nav--child">&horbar; %link</span>');
-                    next_post_link('<span class="post-nav--child">%link &horbar;</span>');
-                ?>                           
-                <div class="clearfix"></div>
-            </aside>
-
+                </article>
         <?php endwhile; endif; ?>
+        <nav class="post-nav and-flex">
+            <?php
+                previous_post_link('<span class="post-nav--child">&horbar; %link</span>');
+                next_post_link('<span class="post-nav--child">%link &horbar;</span>');
+            ?>                           
+        </nav>
     </main>
-    <div class="subscribe subscribe--top-border">
+    <aside class="subscribe">
         <p>Strategies for change. Straight to your inbox.</p>
         <form>
             <fieldset>
@@ -57,7 +55,7 @@ get_header();
                 <input type="submit" value="Join" class="big-button"/>
             </fieldset>
         </form>
-    </div>
+    </aside>
 <?php
 get_footer();
 ?>
