@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-    <main class="content contact animate-text--2s">
+    <main class="content contact">
         <?php if (have_posts()): while (have_posts()): the_post();?>
             <div class="contact-section">
                 <header>About</header>

@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<main id="post" class="headline animate-text--2s"> 
+<main id="post" class="headline"> 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="headline-title"><?php the_title(); ?></div>
         <div class="headline-subtitle"><?php the_content(); ?></div>        

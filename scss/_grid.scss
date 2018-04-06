@@ -36,14 +36,17 @@
 
   &--blog {
     display: grid;
-    grid-gap: 1rem;
     min-height: 100vh;
     grid-template-columns: 5vw repeat(3, 1fr) 5vw;
-    grid-template-rows: 10vh 10vh;
+    grid-template-rows: 10vh;
   
     @include break($for-large-view) {
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: 10vh;
     }
   }
+}
+
+.fix-admin-margin {
+  margin: -28px !important;
 }
